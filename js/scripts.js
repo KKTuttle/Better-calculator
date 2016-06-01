@@ -68,3 +68,14 @@ $(document).ready(function(){
 		event.preventDefault();
 	});
 });
+
+$(document).ready(function(){
+	$("form#orderingaproduct").submit(function() {
+		var firstname = $("input#firstname").val();
+		var lastname = $("input#lastname").val();
+		var address= $("input#address").val();
+  	$("#receipt p").remove();
+		$("#receipt").prepend("<p> Thank you for ordering from our store. Your receipt is below</p><p>"+firstname+" "+lastname+"</p><p>"+address+"</p>");
+		event.preventDefault();
+	});
+});
