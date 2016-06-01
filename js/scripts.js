@@ -23,7 +23,8 @@ $(document).ready(function(){
 		var number1 = parseInt($("input#add1").val());
 		var number2 = parseInt($("input#add2").val());
 
-		alert(add(number1,number2));
+		$("#results").prepend("<h2>"+number1+"+"+number2+"="+add(number1,number2)+"</h2>");
+		event.preventDefault();
 	});
 });
 
@@ -32,7 +33,9 @@ $(document).ready(function(){
 		var number1 = parseInt($("input#subtract1").val());
 		var number2 = parseInt($("input#subtract2").val());
 
-		alert(subtract(number1,number2));
+		$("#results").prepend("<h2>"+number1+"-"+number2+"="+subtract(number1,number2)+"</h2>");
+		event.preventDefault();
+
 	});
 });
 
@@ -41,7 +44,8 @@ $(document).ready(function(){
 		var number1 = parseInt($("input#multiply1").val());
 		var number2 = parseInt($("input#multiply2").val());
 
-		alert(multiply(number1,number2));
+		$("#results").prepend("<h2>"+number1+"x"+number2+"="+multiply(number1,number2)+"</h2>");
+		event.preventDefault();
 	});
 });
 
@@ -50,7 +54,8 @@ $(document).ready(function(){
 		var number1 = parseInt($("input#divide1").val());
 		var number2 = parseInt($("input#divide2").val());
 
-		alert(divide(number1,number2));
+		$("#results").prepend("<h2>"+number1+"/"+number2+"="+divide(number1,number2)+"</h2>");
+		event.preventDefault();
 	});
 });
 
@@ -59,6 +64,7 @@ $(document).ready(function(){
 		var number1 = parseInt($("input#modulo1").val());
 		var number2 = parseInt($("input#modulo2").val());
 
-		alert(modulo(number1,number2));
+		$("#results").prepend("<h2>"+number1+"%"+number2+"="+modulo(number1,number2)+"</h2>");
+		event.preventDefault();
 	});
 });
