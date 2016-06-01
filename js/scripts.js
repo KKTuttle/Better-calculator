@@ -26,9 +26,7 @@ $(document).ready(function(){
 		$("#results").prepend("<h2>"+number1+"+"+number2+"="+add(number1,number2)+"</h2>");
 		event.preventDefault();
 	});
-});
 
-$(document).ready(function(){
 	$("form#subtract").submit(function() {
 		var number1 = parseInt($("input#subtract1").val());
 		var number2 = parseInt($("input#subtract2").val());
@@ -37,9 +35,7 @@ $(document).ready(function(){
 		event.preventDefault();
 
 	});
-});
 
-$(document).ready(function(){
 	$("form#multiply").submit(function() {
 		var number1 = parseInt($("input#multiply1").val());
 		var number2 = parseInt($("input#multiply2").val());
@@ -47,9 +43,7 @@ $(document).ready(function(){
 		$("#results").prepend("<h2>"+number1+"x"+number2+"="+multiply(number1,number2)+"</h2>");
 		event.preventDefault();
 	});
-});
 
-$(document).ready(function(){
 	$("form#divide").submit(function() {
 		var number1 = parseInt($("input#divide1").val());
 		var number2 = parseInt($("input#divide2").val());
@@ -57,9 +51,7 @@ $(document).ready(function(){
 		$("#results").prepend("<h2>"+number1+"/"+number2+"="+divide(number1,number2)+"</h2>");
 		event.preventDefault();
 	});
-});
 
-$(document).ready(function(){
 	$("form#modulo").submit(function() {
 		var number1 = parseInt($("input#modulo1").val());
 		var number2 = parseInt($("input#modulo2").val());
@@ -67,15 +59,24 @@ $(document).ready(function(){
 		$("#results").prepend("<h2>"+number1+"%"+number2+"="+modulo(number1,number2)+"</h2>");
 		event.preventDefault();
 	});
-});
 
-$(document).ready(function(){
 	$("form#orderingaproduct").submit(function() {
 		var firstname = $("input#firstname").val();
 		var lastname = $("input#lastname").val();
 		var address= $("input#address").val();
   	$("#receipt p").remove();
 		$("#receipt").prepend("<p> Thank you for ordering from our store. Your receipt is below</p><p>"+firstname+" "+lastname+"</p><p>"+address+"</p>");
+		event.preventDefault();
+	});
+
+	$("form#booking").submit(function() {
+		var name = $("input#name").val();
+		var date = $("input#date").val();
+		var starttime = $("input#starttime").val();
+		var endtime = $("input#endtime").val();
+
+		$("#confirmation").prepend("<h3>Event Details</h3><h4>"+name+"</h4><h5>"+date+"</h5><h5>"+starttime+" - "+endtime+"</h5>");
+
 		event.preventDefault();
 	});
 });
